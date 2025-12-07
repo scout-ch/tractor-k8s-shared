@@ -1,0 +1,16 @@
+---
+apiVersion: notification.toolkit.fluxcd.io/v1
+kind: Receiver
+metadata:
+  name: pbs-redirector
+  namespace: pbs-redirector
+spec:
+  type: github
+  events:
+    - "ping"
+    - "push"
+  secretRef:
+    name: pbs-redirector-webhook-receiver-token
+  resources:
+    - kind: GitRepository
+      name: pbs-redirector
