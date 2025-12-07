@@ -61,7 +61,7 @@ metadata:
   namespace: mova-erinnerungsbuch
 spec:
   serviceAccountName: mova-erinnerungsbuch
-  interval: 1h
+  interval: 10m0s
   path: .
   prune: true
   sourceRef:
