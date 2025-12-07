@@ -47,7 +47,7 @@ metadata:
   name: mova-erinnerungsbuch
   namespace: mova-erinnerungsbuch
 spec:
-  interval: 1m0s
+  interval: 1h
   ref:
     branch: main
   secretRef:
@@ -61,7 +61,7 @@ metadata:
   namespace: mova-erinnerungsbuch
 spec:
   serviceAccountName: mova-erinnerungsbuch
-  interval: 10m0s
+  interval: 1h
   path: .
   prune: true
   sourceRef:
