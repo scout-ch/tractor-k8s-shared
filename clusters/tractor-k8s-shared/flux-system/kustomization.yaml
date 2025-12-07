@@ -32,3 +32,9 @@ patches:
     target:
       kind: Kustomization
       name: "flux-system"
+  - patch: |
+      spec:
+        value: 1h
+    target:
+      kind: GitRepository
+      name: "flux-system"
