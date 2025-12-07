@@ -61,7 +61,7 @@ metadata:
   namespace: pbs-taiga
 spec:
   serviceAccountName: pbs-taiga
-  interval: 1h
+  interval: 10m0s
   path: kubeconfigs
   prune: true
   sourceRef:
