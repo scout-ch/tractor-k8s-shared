@@ -61,7 +61,7 @@ metadata:
   namespace: pbs-redirector
 spec:
   serviceAccountName: pbs-redirector
-  interval: 1h
+  interval: 10m0s
   path: .
   prune: true
   sourceRef:
