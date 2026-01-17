@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "mergeConfidence:all-badges",
+    "config:recommended",
+    ":disableRateLimiting",
+    ":enableVulnerabilityAlertsWithLabel(High priority)",
+    "group:allNonMajor",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "dependencyDashboard": true,
+  "dependencyDashboardAutoclose": true,
+  "rebaseWhen": "behind-base-branch",
+  "separateMultipleMajor": false,
+  "separateMinorPatch": false,
+  "ignoreTests": true,
+  "assignees": [
+    "cleverer"
+  ],
+  "kubernetes": {
+    "managerFilePatterns": [
+      "/.+\\.yml$/"
+    ]
+  },
+  "flux": {
+    "managerFilePatterns": [
+      "/.+\\.yaml$/",
+    ]
+  }
+}
