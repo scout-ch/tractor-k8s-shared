@@ -81,17 +81,19 @@ spec:
         enabled: true
     ports:
       web:
-        proxyProtocol:
-          insecure: true
-        redirections:
-          entryPoint:
-            priority: 1
-            to: websecure
-            scheme: https
-            permanent: true
+        http:
+          proxyProtocol:
+            insecure: true
+          redirections:
+            entryPoint:
+              priority: 1
+              to: websecure
+              scheme: https
+              permanent: true
       websecure:
-        proxyProtocol:
-          insecure: true
+        http:
+          proxyProtocol:
+            insecure: true
     autoscale:
       enabled: true
       maxReplicas: 3
