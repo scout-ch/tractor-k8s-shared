@@ -95,7 +95,7 @@ spec:
           proxyProtocol:
             insecure: true
     deployment:
-      replicas: null
+      replicas: 3
     resources:
       requests:
         cpu: "100m"
@@ -103,8 +103,5 @@ spec:
       limits:
         cpu: "300m"
         memory: "150Mi"
-    autoscaling:
-      enabled: true
-      maxReplicas: 3
     nodeSelector:
       kaas.infomaniak.cloud/instance-pool: pck-8kxhclv-pdp
