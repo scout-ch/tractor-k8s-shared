@@ -95,5 +95,7 @@ spec:
           insecure: true
     deployment:
       replicas: 3
+    
     nodeSelector:
       kaas.infomaniak.cloud/instance-pool: pck-8kxhclv-pdp
+    
