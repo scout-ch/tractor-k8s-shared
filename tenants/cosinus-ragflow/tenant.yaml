@@ -62,7 +62,7 @@ metadata:
 spec:
   serviceAccountName: cosinus-ragflow
   interval: 10m0s
-  path: .
+  path: fluxcd
   prune: true
   sourceRef:
     kind: GitRepository
