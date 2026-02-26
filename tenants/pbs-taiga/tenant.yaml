@@ -62,7 +62,7 @@ metadata:
 spec:
   serviceAccountName: pbs-taiga
   interval: 10m0s
-  path: kubeconfigs
+  path: flux
   prune: true
   sourceRef:
     kind: GitRepository
