@@ -63,7 +63,7 @@ spec:
       version: 39.0.5
   interval: 10m0s
   driftDetection:
-    mode: warn
+    mode: enabled
   values:
     ingressRoute:
       dashboard:
