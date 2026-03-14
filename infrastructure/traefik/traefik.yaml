@@ -76,7 +76,7 @@ spec:
     service:
       spec:
         externalTrafficPolicy: Local # 👈 Preserve client source IP
-        loadBalancerIp: 37.156.40.230
+        loadBalancerIP: 37.156.40.230
       annotations:
         loadbalancer.openstack.org/proxy-protocol: "true" # 👈 Amphora LB Proxy Protocol einschalten
     logs:
