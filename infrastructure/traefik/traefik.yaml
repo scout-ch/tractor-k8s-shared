@@ -76,7 +76,6 @@ spec:
     service:
       spec:
         externalTrafficPolicy: Local # 👈 Preserve client source IP
-        loadBalancerIP: 37.156.40.230
       annotations:
         loadbalancer.openstack.org/proxy-protocol: "true" # 👈 Amphora LB Proxy Protocol einschalten
     logs:
@@ -113,5 +112,3 @@ spec:
       limits:
         cpu: "300m"
         memory: "150Mi"
-    nodeSelector:
-      kaas.infomaniak.cloud/instance-pool: pck-8kxhclv-pdp
