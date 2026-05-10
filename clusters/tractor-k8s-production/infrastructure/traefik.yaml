@@ -26,4 +26,4 @@ spec:
           value: 195.15.199.206
         - op: add
           path: /spec/values/service/spec/nameOverride
-          value:traefik-tractor-k8s-production
+          value: traefik-tractor-k8s-production
