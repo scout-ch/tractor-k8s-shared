@@ -18,8 +18,9 @@ spec:
         kind: HelmRelease
       patch: |
         - op: add
-          path: /spec/values/nodeSelector/kaas.infomaniak.cloud~1instance-pool
-          value: pck-2tvwejg-ppy
+          path: /spec/values/nodeSelector
+          value:
+            kaas.infomaniak.cloud/instance-pool: pck-2tvwejg-ppy
         - op: add
           path: /spec/values/service/spec/loadBalancerIP
           value: 195.15.199.206
