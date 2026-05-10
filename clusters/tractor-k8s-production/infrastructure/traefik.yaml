@@ -25,5 +25,5 @@ spec:
           path: /spec/values/service/spec/loadBalancerIP
           value: 195.15.199.206
         - op: add
-          path: /spec/values/service/spec/nameOverride
+          path: /spec/values/service/nameOverride
           value: traefik-tractor-k8s-production
