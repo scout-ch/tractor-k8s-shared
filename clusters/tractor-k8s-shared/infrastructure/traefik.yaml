@@ -13,13 +13,13 @@ spec:
   path: ./infrastructure/traefik
   prune: true
   wait: true
-patches:
-  - target:
-      kind: HelmRelease
-    patch: |
-      - op: add
-        path: /spec/values/nodeSelector/kaas.infomaniak.cloud~1instance-pool
-        value: pck-8kxhclv-pdp
-      - op: add
-        path: /spec/values/service/spec/loadBalancerIP
-        value: 37.156.40.230
+  patches:
+    - target:
+        kind: HelmRelease
+      patch: |
+        - op: add
+          path: /spec/values/nodeSelector/kaas.infomaniak.cloud~1instance-pool
+          value: pck-8kxhclv-pdp
+        - op: add
+          path: /spec/values/service/spec/loadBalancerIP
+          value: 37.156.40.230
