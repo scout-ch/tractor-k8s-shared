@@ -1,0 +1,25 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: infrastructure-traefik
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  serviceAccountName: kustomize-controller
+  path: ./infrastructure/traefik
+  prune: true
+  wait: true
+  patches:
+    - target:
+        kind: HelmRelease
+      patch: |
+        - op: add
+          path: /spec/values/nodeSelector/kaas.infomaniak.cloud~1instance-pool
+          value: pck-2tvwejg-ppy
+        - op: add
+          path: /spec/values/service/spec/loadBalancerIP
+          value: 195.15.199.206
