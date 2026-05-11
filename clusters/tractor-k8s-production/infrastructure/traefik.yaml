@@ -35,6 +35,5 @@ spec:
         - op: add
           path: /spec/values/providers/kubernetesIngress
           value:
-            kubernetesIngress:
-              publishedService:
-                pathOverride: traefik/traefik-tractor-k8s-production
+            publishedService:
+              pathOverride: traefik/traefik-tractor-k8s-production
