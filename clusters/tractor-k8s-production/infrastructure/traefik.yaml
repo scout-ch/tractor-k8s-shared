@@ -28,8 +28,7 @@ spec:
           path: /spec/values/service/nameOverride
           value: traefik-tractor-k8s-production
         - op: add
-          path: /spec/values/providers/kubernetesGateway
+          path: /spec/values/providers/kubernetesGateway/statusAddress
           value:
-            statusAddress:
-              service:
-                name: traefik-tractor-k8s-production
+            service:
+              name: traefik-tractor-k8s-production
