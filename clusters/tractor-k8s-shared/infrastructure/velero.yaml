@@ -53,11 +53,3 @@ spec:
   serviceAccountName: kustomize-controller
   path: ./infrastructure/backup-schedule
   prune: true
-  patches:
-    - target:
-        kind: Schedule
-        name: cluster-backup
-      patch: |-
-        - op: replace
-          path: /spec/schedule
-          value: 0 0 * * *
