@@ -97,3 +97,4 @@ spec:
     snapshotsEnabled: false
     configuration:
       defaultVolumesToFsBackup: true
+    deployNodeAgent: true
