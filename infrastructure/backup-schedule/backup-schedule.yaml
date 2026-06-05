@@ -5,7 +5,7 @@ metadata:
   namespace: velero
 spec:
   # Schedule is a Cron expression defining when to run the Backup
-  schedule: 0 3 * * *
+  schedule: "CRON_TZ=Europe/Zurich 0 3 * * *"
   # Specifies whether to use OwnerReferences on backups created by this Schedule.
   # Notice: if set to true, when schedule is deleted, backups will be deleted too. Optional.
   useOwnerReferencesInBackup: true
