@@ -57,7 +57,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: external-snapshotter
-  serviceAccountName: kustomize-controller
+  serviceAccountName: external-snapshotter
   path: ./client/config/crd
   prune: true
   wait: true
@@ -75,7 +75,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: external-snapshotter
-  serviceAccountName: kustomize-controller
+  serviceAccountName: external-snapshotter
   path: ./kubernetes/csi-snapshotter
   prune: true
   wait: true
