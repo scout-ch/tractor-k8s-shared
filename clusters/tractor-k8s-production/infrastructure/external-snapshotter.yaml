@@ -18,15 +18,13 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: infrastructure-volume-snapshot-class
-  namespace: external-snapshotter
 spec:
   interval: 10m0s
   dependsOn:
-    - name: infrastructure-external-snapshotter-crds
+    - name: infrastructure-external-snapshotter
   sourceRef:
     kind: GitRepository
     name: flux-system
-    namespace: flux-system
   serviceAccountName: kustomize-controller
   path: ./infrastructure/volume-snapshot-class
   prune: true
