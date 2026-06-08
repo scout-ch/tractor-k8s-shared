@@ -22,7 +22,7 @@ metadata:
 spec:
   interval: 10m0s
   dependsOn:
-    - name: infrastructure-external-snapshotter
+    - name: infrastructure-external-snapshotter-crds
   sourceRef:
     kind: GitRepository
     name: flux-system
