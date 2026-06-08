@@ -97,7 +97,7 @@ spec:
     snapshotsEnabled: false
     configuration:
       defaultVolumesToFsBackup: false
+      features: EnableCSI
     deployNodeAgent: true
     nodeAgent:
       disableHostPath: true
-    features: EnableCSI
