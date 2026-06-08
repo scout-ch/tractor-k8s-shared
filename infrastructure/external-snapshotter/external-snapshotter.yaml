@@ -76,7 +76,7 @@ spec:
     kind: GitRepository
     name: external-snapshotter
   serviceAccountName: external-snapshotter
-  path: ./kubernetes/csi-snapshotter
+  path: ./deploy/kubernetes/snapshot-controller
   prune: true
   wait: true
   targetNamespace: external-snapshotter
