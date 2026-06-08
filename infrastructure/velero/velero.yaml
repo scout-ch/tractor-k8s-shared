@@ -96,7 +96,7 @@ spec:
     backupsEnabled: false # created manually
     snapshotsEnabled: false
     configuration:
-      defaultVolumesToFsBackup: true
+      defaultVolumesToFsBackup: false
     deployNodeAgent: true
     nodeAgent:
       disableHostPath: true
