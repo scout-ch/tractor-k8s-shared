@@ -26,6 +26,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
+    namespace: flux-system
   serviceAccountName: kustomize-controller
   path: ./infrastructure/volume-snapshot-class
   prune: true
