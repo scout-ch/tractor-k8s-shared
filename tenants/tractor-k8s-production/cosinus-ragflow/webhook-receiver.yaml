@@ -1,0 +1,16 @@
+---
+apiVersion: notification.toolkit.fluxcd.io/v1
+kind: Receiver
+metadata:
+  name: cosinus-ragflow
+  namespace: cosinus-ragflow
+spec:
+  type: github
+  events:
+    - "ping"
+    - "push"
+  secretRef:
+    name: cosinus-ragflow-webhook-receiver-token
+  resources:
+    - kind: GitRepository
+      name: cosinus-ragflow
