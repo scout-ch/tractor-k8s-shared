@@ -42,7 +42,7 @@ spec:
           value: "https://s3.pub2.infomaniak.cloud/"
         - op: add
           path: /spec/config/publicUrl
-          value: "https://s3.pub2.infomaniak.cloud/object/v1/AUTH_b2f67cfc61224da6b87153025cb404e6/k8s-backup"
+          value: "https://s3.pub2.infomaniak.cloud/object/v1/AUTH_b2f67cfc61224da6b87153025cb404e6"
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
