@@ -8,7 +8,10 @@ spec:
   accessMode: ReadWrite
   default: true
   objectStorage:
-    bucket: k8s-backups
+    bucket: tractor-k8s-backup
   config:
-    cloud: infomaniak
-  provider: community.openstack.org/openstack
+    s3ForcePathStyle: true
+  provider: velero.io/aws
+  credential:
+    key: tractor-k8s-backup
+    name: infomaniak-s3-credentials
