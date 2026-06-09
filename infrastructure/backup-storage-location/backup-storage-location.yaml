@@ -12,6 +12,8 @@ spec:
   config:
     region: "us-east-1"
     s3ForcePathStyle: "true"
+    checksumAlgorithm: ""
+    tagging: null
   provider: velero.io/aws
   credential:
     key: tractor-k8s-backup
