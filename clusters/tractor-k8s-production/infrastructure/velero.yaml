@@ -37,6 +37,14 @@ spec:
         - op: add
           path: /spec/objectStorage/prefix
           value: "tractor-k8s-production"
+    - target:
+        kind: BackupStorageLocation
+        name: infomaniak
+      patch: |-
+        - op: add
+          path: /spec/config/s3Url
+          value: "https://s3.pub2.infomaniak.cloud/object/v1/AUTH_b2f67cfc61224da6b87153025cb404e6"
+
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
