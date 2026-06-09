@@ -10,7 +10,7 @@ spec:
   objectStorage:
     bucket: tractor-k8s-backup
   config:
-    s3ForcePathStyle: true
+    s3ForcePathStyle: "true"
   provider: velero.io/aws
   credential:
     key: tractor-k8s-backup
