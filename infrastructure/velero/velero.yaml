@@ -88,7 +88,7 @@ spec:
         readOnly: true
     initContainers:
       - name: velero-plugin-for-aws
-        image: velero/velero-plugin-for-aws:v1.14.1
+        image: velero/velero-plugin-for-aws:v1.13.2 # currently locked to older version to prevent issues with it trying to set tags.
         imagePullPolicy: IfNotPresent
         volumeMounts:
           - mountPath: /target
