@@ -8,7 +8,7 @@ spec:
   accessMode: ReadWrite
   default: true
   objectStorage:
-    bucket: tractor-k8s-backup
+    bucket: k8s-backups
   config:
     region: "us-east-1"
     s3ForcePathStyle: "true"
