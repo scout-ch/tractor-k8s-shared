@@ -1,0 +1,69 @@
+#
+# RBAC
+#
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    toolkit.fluxcd.io/tenant: pbs-backstage
+  
+  annotations:
+    scheduler.alpha.kubernetes.io/node-selector: kaas.infomaniak.cloud/instance-pool=pck-2tvwejg-ppy
+  
+  name: pbs-backstage
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    toolkit.fluxcd.io/tenant: pbs-backstage
+  name: pbs-backstage
+  namespace: pbs-backstage
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  labels:
+    toolkit.fluxcd.io/tenant: pbs-backstage
+  name: gotk-reconciler
+  namespace: pbs-backstage
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+  - kind: ServiceAccount
+    name: pbs-backstage
+    namespace: pbs-backstage
+
+#
+# Sync
+#
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: pbs-backstage
+  namespace: pbs-backstage
+spec:
+  interval: 1h
+  ref:
+    branch: main
+  secretRef:
+    name: flux-git-deploy-key
+  url: ssh://git@github.com/scout-ch/tractor-k8s-shared-pbs-backstage.git
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: pbs-backstage
+  namespace: pbs-backstage
+spec:
+  serviceAccountName: pbs-backstage
+  interval: 10m0s
+  path: kubeconfigs
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: pbs-backstage
