@@ -1,0 +1,16 @@
+---
+apiVersion: notification.toolkit.fluxcd.io/v1
+kind: Receiver
+metadata:
+  name: pbs-matrix
+  namespace: pbs-matrix
+spec:
+  type: github
+  events:
+    - "ping"
+    - "push"
+  secretRef:
+    name: pbs-matrix-webhook-receiver-token
+  resources:
+    - kind: GitRepository
+      name: pbs-matrix
