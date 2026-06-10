@@ -20,7 +20,7 @@ spec:
         - op: add
           path: /spec/values/nodeSelector
           value:
-            kaas.infomaniak.cloud/instance-pool: pck-2tvwejg-ppy
+            kaas.infomaniak.cloud/instance-pool: pck-2tvwejg-pne
         - op: add
           path: /spec/values/service/spec/loadBalancerIP
           value: 195.15.199.206
