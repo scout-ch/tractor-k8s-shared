@@ -9,7 +9,7 @@ metadata:
     toolkit.fluxcd.io/tenant: pbs-matrix
   
   annotations:
-    scheduler.alpha.kubernetes.io/node-selector: kaas.infomaniak.cloud/instance-pool=pck-2tvwejg-ppy
+    scheduler.alpha.kubernetes.io/node-selector: kaas.infomaniak.cloud/instance-pool=pck-2tvwejg-pne
   
   name: pbs-matrix
 ---
