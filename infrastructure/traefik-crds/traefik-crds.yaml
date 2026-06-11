@@ -24,6 +24,6 @@ spec:
     kind: GitRepository
     name: traefik-crds
   serviceAccountName: kustomize-controller
-  path: ./traefik/crd
+  path: ./traefik/crds
   prune: true
   wait: true
