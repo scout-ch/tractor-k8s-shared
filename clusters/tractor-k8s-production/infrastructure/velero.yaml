@@ -35,8 +35,9 @@ spec:
         name: infomaniak
       patch: |-
         - op: add
-          path: /spec/objectStorage/prefix
-          value: "tractor-k8s-production"
+          path: /spec/objectStorage
+          value:
+            bucket: "tractor-k8s-production"
         - op: add
           path: /spec/config/s3Url
           value: "https://s3.pub2.infomaniak.cloud/"
