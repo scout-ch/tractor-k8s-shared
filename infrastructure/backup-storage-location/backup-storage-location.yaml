@@ -7,8 +7,6 @@ metadata:
 spec:
   accessMode: ReadWrite
   default: true
-  objectStorage:
-    bucket: tractor-k8s-backup
   config:
     region: "us-east-1"
     s3ForcePathStyle: "true"
