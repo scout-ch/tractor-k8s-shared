@@ -1,0 +1,2 @@
+resources:
+  - ./instance-pool-selector.yaml
