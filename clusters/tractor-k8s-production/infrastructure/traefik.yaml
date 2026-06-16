@@ -57,9 +57,8 @@ spec:
               pathOverride: traefik/traefik-tractor-k8s-production
 
         - op: add
-          path: /spec/values
+          path: /spec/values/deployment
           value:
-            deployment:
-              replicas: 3
+            replicas: 3
       
 
