@@ -59,7 +59,7 @@ spec:
         - op: add
           path: /spec/values
           value:
-            deployments:
+            deployment:
               replicas: 3
       
 
