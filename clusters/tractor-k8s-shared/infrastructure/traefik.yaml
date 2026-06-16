@@ -55,3 +55,11 @@ spec:
           value:
             publishedService:
               pathOverride: traefik/traefik-tractor-k8s-shared
+
+        - op: add
+          path: /spec/values
+          value:
+            deployments:
+              replicas: 3
+      
+
