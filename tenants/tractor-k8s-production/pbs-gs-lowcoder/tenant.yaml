@@ -9,7 +9,7 @@ metadata:
     toolkit.fluxcd.io/tenant: pbs-gs-lowcoder
   
   annotations:
-    "tractor.scout.ch/instance-pool": pck-8kxhclv-pm8
+    "tractor.scout.ch/instance-pool": pck-2tvwejg-pne
   
   name: pbs-gs-lowcoder
 ---
