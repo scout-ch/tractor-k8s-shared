@@ -9,7 +9,7 @@ metadata:
     toolkit.fluxcd.io/tenant: clever-debug
   
   annotations:
-    "tractor.scout.ch/instance-pool": pck-8kxhclv-pm8
+    "tractor.scout.ch/instance-pool": pck-2tvwejg-pne
   
   name: clever-debug
 ---
