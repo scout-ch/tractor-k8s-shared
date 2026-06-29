@@ -62,7 +62,7 @@ metadata:
 spec:
   serviceAccountName: pbs-backstage
   interval: 10m0s
-  path: .
+  path: kubeconfigs
   prune: true
   sourceRef:
     kind: GitRepository
