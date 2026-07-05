@@ -13,6 +13,15 @@ spec:
   path: ./infrastructure/kyverno
   prune: true
   wait: true
+  patches:
+    - target:
+        kind: Namespace
+        name: kyverno
+      patch: |-
+        - op: add
+          path: /metadata/annotations/tractor.scout.ch~1instance-pool
+          value: "pck-2tvwejg-pne"
+
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
