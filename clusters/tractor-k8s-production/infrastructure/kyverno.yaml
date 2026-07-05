@@ -15,12 +15,15 @@ spec:
   wait: true
   patches:
     - target:
-        kind: Namespace
+        kind: HelmRelease
         name: kyverno
       patch: |-
         - op: add
-          path: /metadata/annotations/tractor.scout.ch~1instance-pool
-          value: "pck-2tvwejg-pne"
+          path: /spec/values
+          value:
+            global:
+              nodeSelector:
+                "tractor.scout.ch/instance-pool": "pck-2tvwejg-pne"
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
