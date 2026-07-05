@@ -19,9 +19,10 @@ spec:
         name: kyverno
       patch: |-
         - op: add
-          path: /spec/values/global/nodeSelector
+          path: /spec/values/global
           value:
-            "tractor.scout.ch/instance-pool": "pck-2tvwejg-pne"
+            nodeSelector:
+              "tractor.scout.ch/instance-pool": "pck-2tvwejg-pne"
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
