@@ -22,7 +22,7 @@ spec:
           path: /spec/values/global
           value:
             nodeSelector:
-              "tractor.scout.ch/instance-pool": "pck-2tvwejg-pne"
+              "kaas.infomaniak.cloud/instance-pool": "pck-2tvwejg-pne"
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
