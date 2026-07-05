@@ -23,6 +23,16 @@ spec:
           value:
             nodeSelector:
               "kaas.infomaniak.cloud/instance-pool": "pck-2tvwejg-pne"
+    - target:
+        kind: HelmRelease
+        name: kyverno
+      patch: |-
+        - op: add
+          path: /spec/values/backgroundController
+          value:
+            resources:
+              limits:
+                memory: 512Mi
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
