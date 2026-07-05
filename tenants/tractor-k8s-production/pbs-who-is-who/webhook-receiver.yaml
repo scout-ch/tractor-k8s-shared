@@ -1,0 +1,16 @@
+---
+apiVersion: notification.toolkit.fluxcd.io/v1
+kind: Receiver
+metadata:
+  name: pbs-who-is-who
+  namespace: pbs-who-is-who
+spec:
+  type: github
+  events:
+    - "ping"
+    - "push"
+  secretRef:
+    name: pbs-who-is-who-webhook-receiver-token
+  resources:
+    - kind: GitRepository
+      name: pbs-who-is-who
