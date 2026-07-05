@@ -13,6 +13,14 @@ spec:
   path: ./infrastructure/velero
   prune: true
   wait: true
+  patches:
+    - target:
+        kind: Namespace
+        name: velero
+      patch: |-
+        - op: add
+          path: /metadata/annotations/tractor.scout.ch~1instance-pool
+          value: "pck-2tvwejg-pne"
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
