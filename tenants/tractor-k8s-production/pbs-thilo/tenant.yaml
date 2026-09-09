@@ -1,0 +1,69 @@
+#
+# RBAC
+#
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    toolkit.fluxcd.io/tenant: pbs-thilo
+  
+  annotations:
+    "tractor.scout.ch/instance-pool": pck-2tvwejg-pne
+  
+  name: pbs-thilo
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    toolkit.fluxcd.io/tenant: pbs-thilo
+  name: pbs-thilo
+  namespace: pbs-thilo
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  labels:
+    toolkit.fluxcd.io/tenant: pbs-thilo
+  name: gotk-reconciler
+  namespace: pbs-thilo
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+  - kind: ServiceAccount
+    name: pbs-thilo
+    namespace: pbs-thilo
+
+#
+# Sync
+#
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: pbs-thilo
+  namespace: pbs-thilo
+spec:
+  interval: 1h
+  ref:
+    branch: main
+  secretRef:
+    name: flux-git-deploy-key
+  url: ssh://git@github.com/scout-ch/tractor-k8s-shared-pbs-thilo.git
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: pbs-thilo
+  namespace: pbs-thilo
+spec:
+  serviceAccountName: pbs-thilo
+  interval: 10m0s
+  path: .
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: pbs-thilo
