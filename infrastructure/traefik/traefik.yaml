@@ -101,3 +101,6 @@ spec:
       limits:
         cpu: "300m"
         memory: "150Mi"
+    rbac:
+      aggregateTo:
+        - admin
