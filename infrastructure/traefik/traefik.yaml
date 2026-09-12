@@ -105,14 +105,23 @@ spec:
       - apiVersion: rbac.authorization.k8s.io/v1
         kind: ClusterRole
         metadata:
-          name: traefik-middlewares-admin
+          name: aggregate-traefik-crds-to-admin
           labels:
             rbac.authorization.k8s.io/aggregate-to-admin: "true"
         rules:
           - apiGroups:
               - traefik.io
             resources:
+              - ingressroutes
+              - ingressroutetcps
+              - ingressrouteudps
               - middlewares
+              - middlewaretcps
+              - tlsoptions
+              - tlsstores
+              - traefikservices
+              - serverstransports
+              - serverstransporttcps
             verbs:
               - get
               - list
