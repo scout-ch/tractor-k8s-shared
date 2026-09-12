@@ -62,7 +62,7 @@ metadata:
 spec:
   serviceAccountName: pbs-redirector
   interval: 10m0s
-  path: .
+  path: ./flux/
   prune: true
   sourceRef:
     kind: GitRepository
