@@ -61,7 +61,8 @@ metadata:
   namespace: pbs-taiga
 spec:
   serviceAccountName: pbs-taiga
-  interval: 10m0s
+  interval: 10m
+  retryInterval: 1m
   path: flux
   prune: true
   sourceRef:
