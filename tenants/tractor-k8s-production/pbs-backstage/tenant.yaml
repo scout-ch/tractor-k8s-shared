@@ -61,7 +61,8 @@ metadata:
   namespace: pbs-backstage
 spec:
   serviceAccountName: pbs-backstage
-  interval: 10m0s
+  interval: 10m
+  retryInterval: 1m
   path: kubeconfigs
   prune: true
   sourceRef:
