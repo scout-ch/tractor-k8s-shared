@@ -14,4 +14,11 @@ spec:
   prune: true
   wait: true
   patches:
-    [{"patch":[{"op":"replace","path":"/spec/values/grafana/enabled","value":true},{"op":"replace","path":"/spec/values/grafana/ingress/enabled","value":true},{"op":"add","path":"/spec/values/grafana/ingress/hosts","value":["grafana.k8s.tractor.scout.ch"]},{"op":"replace","path":"/spec/values/prometheus/ingress/enabled","value":true},{"op":"add","path":"/spec/values/prometheus/ingress/hosts","value":["prometheus.k8s.tractor.scout.ch"]}],"target":{"kind":"HelmRelease","name":"prometheus"}}]
+    - "patch":
+      - "op": "replace"
+        "path": "/spec/values/grafana/enabled"
+        "value": true
+      "target":
+        "kind": "HelmRelease"
+        "name": "prometheus"
+    
