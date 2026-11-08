@@ -81,4 +81,4 @@ spec:
         enabled: true
         ingressClassName: traefik
         hosts:
-          - prometheus.k8s.tractor.scout.ch.
+          - prometheus.k8s.tractor.scout.ch
