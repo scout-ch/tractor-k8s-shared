@@ -72,8 +72,13 @@ spec:
     alertmanager:
       enabled: false
 
-    grafana:
-      enabled: false
+grafana:
+  enabled: false
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - grafana.k8s.tractor.scout.ch
 
     prometheus:
       enabled: true
