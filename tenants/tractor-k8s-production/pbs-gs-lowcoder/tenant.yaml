@@ -61,7 +61,8 @@ metadata:
   namespace: pbs-gs-lowcoder
 spec:
   serviceAccountName: pbs-gs-lowcoder
-  interval: 10m0s
+  interval: 10m
+  retryInterval: 1m
   path: fluxcd
   prune: true
   sourceRef:
