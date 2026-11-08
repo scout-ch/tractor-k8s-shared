@@ -61,7 +61,8 @@ metadata:
   namespace: pbs-who-is-who
 spec:
   serviceAccountName: pbs-who-is-who
-  interval: 10m0s
+  interval: 10m
+  retryInterval: 1m
   path: .
   prune: true
   sourceRef:
